@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Коловерть</title>
+    <link rel="stylesheet" href="/website/clays/mars/mars.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Nunito Sans";
+    font-weight: 500;
+}
+
+.header{
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: white;
+}
+
+.main {
+    margin-top: 25vh;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 120px;
+}
+
+.no-style-link{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.header-logo-wrapper{
+    margin-left: 30px;
+}
+
+.header-logo{
+    width: 260px;
+    height: 75px;
+    user-select: none;
+}
+
+
+.ul-header{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-header-wrapper{
+    margin-right: 30px;
+}
+
+
+
+.li-header{
+    margin-right: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+    color: #434242;
+}
+
+.li-order{
+    background-color: #a33232;
+    color: white;
+    padding: 9px 12px 9px 12px;
+    border-radius: 15px;
+}
+
+.li-order:hover{
+    background-color: #8e2828e8;
+    transition: ease-in-out 0.3s;
+}
+
+
+
+.li-header {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  position: relative; 
+}
+
+.li-header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #434242; 
+  transition: width 0.5s ease-in-out; 
+}
+
+.li-header:hover::before {
+  width: 100%;
+}
+
+.li-order {
+  background-color: #a33232;
+  color: white;
+  padding: 9px 12px 9px 12px;
+  border-radius: 11px;
+}
+
+.li-order::before {
+  content: none; 
+}
+
+.test-clay-description-wrapper{
+    width: 90%;
+    margin-bottom: 20px;
+    margin-left: 90px;
+}
+
+.test-clay-description{
+    font-size: 25px;
+    font-weight: 450;
+    margin-top: 1px;
+}
+
+.test-clay-description-grey{
+    color: #434242;
+}
+
+
+
+.description-main{
+    font-size: 25px;
+    font-weight: 450;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.description-main-wrapper{
+    margin-left: 90px;
+    margin-top: 20px;
+}
+
+.sample-order-button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: clamp(40vh, 55vh, 65vh);
+    padding-bottom: 60px;
+}
+.sample-order-button{
+    font-size: 20px;
+    cursor: pointer; 
+    background-color: #a33232;
+    color: white;
+    padding: 12px 12px 12px 12px;
+    border-radius: 10px;
+}
+
+.link-style{
+    color: white;
+    text-decoration: none;
+}
+
+.product-card{
+    width: 360px;
+    height: 670px;
+    border: 2px solid #434242b9;
+    border-radius: 8px;
+}
+
+.product-cards-wrapper{
+    margin-top: 33vh;
+}
+
+.product-cards{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.img-card-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.card-img{
+    height: 360px;
+    width: 360px;
+}
+
+.name-price-wrapper{
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+    border-bottom: 1px solid #43424249;
+}
+
+.clay-price-wrapper{
+    margin-left: 175px;
+}
+
+.grey-color-span{
+    color: #434242e2;
+}
+
+.clay-name{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
+
+.mars-clay-price{
+    margin-left: 35px;
+}
+
+.venus-clay-price{
+    margin-left: 10px;
+}
+
+.clay-price{
+    font-size: 18px;
+}
+
+.pre-description-text-wrapper{
+    display: flex;
+    margin-left: 65px;
+}
+.pre-description-text{
+    font-size: 25px;
+    font-weight: 450;
+    margin-top: 20px;
+}
+
+.clay-description-wrapper{
+    margin-top: 30px;
+}
+
+.clay-description{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 17px;
+    list-style: none;
+}
+
+.add-button-wrapper{
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+
+
+.product-button{
+    background-color: #a33232;
+    color: white;
+    width: 140px;
+    height: 50px;
+    border-radius: 10px; 
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.about-clay-button{
+    background-color: #434242;
+}
+
+.add-button:hover{
+    background-color: #8b1818;
+    transition: ease-in-out 0.3s;
+
+}
+
+.footer{
+    margin-top: 100px;
+    height: 250px;
+    width: 100vw;
+    background-color: #a33232;
+}
+
+.footer-text-wrapper{
+    display: flex;
+    align-items: center;
+    height: 250px;
+    margin-left: 50px;
+}
+.footer-text{
+    color: white;
+    font-size: 17px;;
+}
+
+.review{
+    width: 380px;
+    height: 280px;
+    background-color: #434242be;
+    border-radius: 12px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.icon-name{
+    display: flex;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+
+.reviews-wrapper{
+    margin-top: 33vh;
+    display: flex;
+    justify-content: center;
+}
+
+.reviews{
+    display: flex;
+}
+
+.img-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.review-name-wrapper{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.review-name{
+    font-size: 18px;
+    color: white;
+}
+
+.review-text-wrapper{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 300px;
+}
+
+.review-text{
+    color: white;
+}
+
+.description-main {
+    opacity: 0;
+}
+
+.description-main.visible {
+    opacity: 1;
+    animation: fadeInUp 2s ease-out forwards;
+}
+
+.contacts-text-wrapper{
+    color: white;
+    font-size: 20px;
+    display: flex;
+    margin-left: 100px;
+}
+
+
+    .swiper {
+      margin-top: 90px;  
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    .order-form-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .order-form{
+        width: 65%;
+        height: 710px;
+        border: 2px solid #434242b9;
+        border-radius: 12px;
+    }
+
+    .order-our-clay-wrapper{
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+    }
+
+    .order-our-clay{
+        font-size: 20px;
+    }
+
+    .name-of-the-clay-wrapper{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .name-of-the-clay{
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .delivery-method-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.delivery-label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+    margin-left: 0;
+    text-align: center;
+}
+
+.delivery-select {
+    width: 70%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #a33232;
+    font-size: 16px;
+    background: #f7f7f7;
+    color: #434242;
+    margin-bottom: 10px;
+    appearance: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    transition: border 0.2s;
+}
+
+.delivery-select:focus {
+    outline: none;
+    border: 1px solid #a33232;
+}
+
+.sample-order-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.order-label {
+    font-size: 16px;
+    margin-bottom: 6px;
+    margin-top: 18px;
+    align-self: flex-start;
+    margin-left: 15%;
+}
+
+.order-input {
+    width: 70%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #a33232;
+    font-size: 16px;
+    background: #f7f7f7;
+    color: #434242;
+    margin-bottom: 10px;
+    display: block;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* Добавлено для одинаковой ширины всех селекторов */
+    min-width: 200px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.order-input:focus {
+    outline: none;
+    border: 1px solid #a33232;
+}
+
+.sample-order-form .order-label {
+    margin-top: 18px;
+}
+.sample-order-form .order-label:first-of-type {
+    margin-top: 0;
+}
+
+.order-submit-btn {
+    margin-top: 18px;
+    background: #a33232;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 32px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.order-submit-btn:hover {
+    background: #8b1818;
+}
+
+
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+@media (max-width: 954px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .header {
+        height: auto;
+    }
+
+    .header-logo-wrapper {
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .header-logo{
+    width: 280px;
+    height: auto;
+    user-select: none;
+}
+
+
+    .nav-header-wrapper {
+        margin: 20px 0;
+    }
+
+    .ul-header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .li-header {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .description-main-wrapper {
+        margin: 30px 20px 0 20px;
+        text-align: center;
+    }
+
+    .description-main {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .sample-order-button-wrapper {
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .sample-order-button {
+        font-size: 18px;
+        padding: 10px 14px;
+    }
+
+    .test-clay-description-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.test-clay-description{
+    font-size: 25px;
+    font-weight: 450;
+}
+
+}
+
+@media (max-width: 500px) {
+    .ul-header {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+</style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-logo-wrapper">
+                <img src="/assets/logo.png" alt="" class="header-logo">
+            </div>
+            <div class="nav-header-wrapper">
+                    <ul class="ul-header">
+                        <li class="li-header" id="scroll-to-about"><a class="no-style-link"  href="index.html">назад</a></li>
+                    </ul>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container-main">
+            <div class="order-form-wrapper">
+                <div class="order-form">
+                    <div class="order-our-clay-wrapper">
+                        <p class="order-our-clay">Оформите заказ</p>
+                    </div>
+                    <div class="name-of-the-clay-wrapper">
+                        <p class="name-of-the-clay">Марс</p>
+                    </div>
+                    <form class="sample-order-form">
+                        <label class="order-label">Выберите вес глины:</label>
+                        <select id="delivery-method" name="delivery-method" class="order-input" required>
+                            <option value="" disabled selected>Выберите вес</option>
+                            <option value="one">5</option>
+                            <option value="two">7.3</option>
+                            <option value="three">10</option>
+                        </select>
+
+                        <label for="delivery-method" class="order-label">Способ доставки:</label>
+                        <select id="delivery-method" name="delivery-method" class="order-input" required>
+                            <option value="" disabled selected>Выберите способ доставки</option>
+                            <option value="cdek">СДЭК</option>
+                            <option value="boxberry">Boxberry</option>
+                            <option value="post">Почта России</option>
+                    
+                        </select>
+
+                        <label for="fio" class="order-label">ФИО:</label>
+                        <input type="text" id="fio" name="fio" class="order-input" placeholder="Введите ФИО" required>
+
+                        <label for="phone" class="order-label">Номер телефона:</label>
+                        <input type="tel" id="phone" name="phone" class="order-input" placeholder="+7 900 000 00 00" required>
+
+                        <label for="address" class="order-label">Город и адрес пункта выдачи заказов:</label>
+                        <input type="text" id="address" name="address" class="order-input" placeholder="Город, улица, дом, квартира" required>
+
+                        <button type="submit" class="order-submit-btn">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="footer-text-wrapper">
+                <!-- <p class="footer-text">© 2025 Коловерть</p>
+                <div class="contacts-text-wrapper">
+                    <p class="contacts-text">Контакты</p>
+                </div>
+                <div class="contacts-wrapper">
+                    <ul class="ul-contacts">
+                        <li class="li-contacts">+7 920 449 69 19</li>
+                        <li class="li-contacts">mail@mail.ru</li>
+                        <li class="li-contacts">Телеграм</li>
+                        <li class="li-contacts">Вк</li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
