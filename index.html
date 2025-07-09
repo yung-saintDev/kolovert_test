@@ -9,8 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <style>
-       *{
+    <style>*{
     margin: 0;
     padding: 0;
 }
@@ -856,11 +855,16 @@ html, body {
 
 
 @media (max-width: 500px) {
+    .ul-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .studio-popup-box {
     min-width: unset;
     max-width: 98vw;
     width: 98vw;
-    padding: 12px 2vw;
+    padding: 10px 2vw;
     border-radius: 10px;
   }
   .studio-popup-title {
@@ -869,13 +873,11 @@ html, body {
     margin-bottom: 12px;
   }
   .studio-input {
-    font-size: 16px;
-    padding: 10px 8px;
-    width: 100%;
-    margin-bottom: 10px;
-    box-sizing: border-box;
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 5px;
   }
-  .studio-btn {
+  .studio-btn, .studio-btn-main, .studio-btn-cancel {
     font-size: 16px;
     padding: 12px 0;
     width: 48%;
@@ -883,36 +885,527 @@ html, body {
     margin: 0 1%;
     box-sizing: border-box;
   }
-  #studio-form {
+
+    #studio-form {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
   }
+
   .studio-popup-message {
     font-size: 15px;
     text-align: center;
     margin-top: 10px;
   }
-  .studio-btn-main,
+
+    .studio-btn-main,
   .studio-btn-cancel {
     margin-top: 10px;
     width: 100%;
     min-width: unset;
     display: block;
   }
-  /* Кнопки в столбик */
-  #studio-form {
+
+    #studio-form {
     flex-direction: column;
   }
-} 
-    </style>
+
+}
+
+/* Make sure popup is always centered */
+.studio-popup {
+  /* display: flex !important; */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Burger styles */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 10001;
+  background: none;
+  border: none;
+}
+.burger span {
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 4px 0;
+  background: #a33232;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Анимация превращения в крест */
+.burger.burger-open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.burger.burger-open span:nth-child(2) {
+  opacity: 0;
+}
+.burger.burger-open span:nth-child(3) {
+  transform: translateY(-15px) rotate(-45deg);
+}
+
+@media (max-width: 800px) {
+  .burger {
+    display: flex;
+  }
+  .nav-header-wrapper {
+    position: fixed;
+    top: 0; right: -100vw;
+    width: 70vw;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -2px 0 16px rgba(0,0,0,0.07);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 24px 24px 24px;
+    transition: right 0.3s;
+    z-index: 10000;
+  }
+  .nav-header-wrapper.nav-open {
+    right: 0;
+  }
+  .ul-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .li-header, .li-order {
+    font-size: 20px;
+    margin: 0;
+    padding: 8px 0;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .li-order {
+    text-align: center;
+    margin-top: 12px;
+    padding: 14px 0;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* Even smaller screens */
+@media (max-width: 500px) {
+
+  .studio-popup-box {
+    min-width: 99vw;
+    max-width: 100vw;
+    padding: 8px 1vw;
+    border-radius: 8px;
+  }
+}
+
+/* Центрируем promo-hero по высоте экрана */
+.promo-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh; /* почти весь экран */
+  width: 100%;
+  margin-bottom: 0;
+  padding-top: 0;
+  box-sizing: border-box;
+  background: url('/assets/background.jpeg') center center/cover no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+.promo-main-wrapper {
+  margin: 0 0 24px 0;
+  padding: 0 12px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.sample-order-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+
+
+
+
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 10px;
+    margin-top: 0;
+  }
+  .header-logo-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1 1 auto;
+  }
+  .header-logo {
+    margin-left: 0;
+    margin-right: 0;
+    width: 170px;
+    height: auto;
+  }
+  .burger {
+    display: flex;
+    margin-left: auto;
+    margin-right: 0;
+    align-self: center;
+  }
+
+  .header{
+    height: 90px;
+  }
+}
+
+@media (max-width: 1139px) {
+  .product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+  .product-card {
+    width: 290px;          
+    height: 570px;        
+    margin: 0 20px 18px 20px;
+    padding: 0 8px;
+  }
+  .card-img {
+    width: 306px;
+    height: 290px;
+  }
+  .clay-name {
+    font-size: 20px;
+  }
+  .clay-price {
+    font-size: 16px;
+  }
+  .clay-description {
+    font-size: 15px;
+  }
+  .product-button {
+    width: 100%;
+    min-width: 0;
+    font-size: 15px;
+    height: 40px;
+    padding: 0 6px;
+  }
+  .add-button-wrapper {
+    gap: 8px;
+  }
+}
+
+.promo-hero {
+  background: none !important;
+}
+
+.promo-swiper {
+  background: none !important;
+}
+
+/* --- Swiper pagination fix --- */
+.promo-swiper {
+  padding-bottom: 48px; /* enough space for dots */
+  overflow: visible !important;
+}
+
+.swiper-pagination {
+  display: none !important;
+}
+
+/* Align second slide text and button like the first slide */
+.promo-swiper .special-for-studios-wrapper,
+.promo-swiper .get-conditions-wrapper {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 24px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promo-swiper .special-for-studios-wrapper {
+  margin-bottom: 0;
+}
+
+.promo-swiper .get-conditions-wrapper {
+  margin-top: 0;
+  margin-bottom: 0;
+  justify-content: center;
+}
+
+.promo-swiper .special-for-studios {
+  width: 100%;
+  text-align: center;
+}
+
+/* Make the button on the second slide match the vertical position of the first slide */
+.promo-swiper .swiper-slide:nth-child(2) .conditions-button {
+  margin-top: 100px;
+}
+
+.promo-swiper .swiper-slide:nth-child(2) .for-studios {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Центрируем текст на втором слайде Swiper */
+.promo-swiper .swiper-slide:nth-child(2) .special-for-studios,
+.promo-swiper .swiper-slide:nth-child(2) .for-studios {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  text-align: center !important;
+  width: 100% !important;
+  display: block;
+}
+
+.promo-swiper .swiper-slide:nth-child(2) .for-studios small {
+  font-size: 0.85em;
+  opacity: 0.85;
+  display: block;
+  margin-top: 8px;
+}
+
+
+@media(max-width: 1085px){
+    .product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+  .product-card {
+    width: 260px;          
+    height: 590px;        
+    margin: 0 20px 18px 20px;
+    padding: 0 8px;
+  }
+  
+  .card-img {
+    width: 280px;
+    height: 280px;
+  }
+  .clay-name {
+    font-size: 20px;
+  }
+  .clay-price {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+
+  .venus-clay-price {
+    margin-left: -15px;
+  }
+  
+  .jupiter-clay-price {
+    margin-left: -20px;
+  }
+
+  .clay-description {
+    font-size: 15px;
+  }
+  .product-button {
+    width: 100%;
+    min-width: 0;
+    font-size: 15px;
+    height: 40px;
+    padding: 0 6px;
+  }
+  .add-button-wrapper {
+    gap: 8px;
+  }
+}
+
+
+@media(max-width: 995px){
+    .product-cards-wrapper {
+        display: flex;
+        justify-content: center; 
+        width: 100%;
+    }
+
+    .product-cards{
+        display: block;
+        width: 100%;
+    }
+
+    .product-card {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .product-card{
+    width: 360px;
+    height: 670px;
+    border: 2px solid #434242b9;
+    border-radius: 8px;
+}
+
+
+.clay-name{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.clay-price-wrapper{
+      margin-left: 175px;
+
+}
+
+.card-img{
+    height: 360px;
+    width: 375px;
+}
+
+}
+
+
+
+@media (max-width: 500px) {
+
+
+}
+
+/* Cross (close) button for mobile nav */
+.nav-close {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-close::before,
+.nav-close::after {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 4px;
+  background: #a33232;
+  border-radius: 2px;
+}
+.nav-close::before {
+  transform: rotate(45deg);
+}
+.nav-close::after {
+  transform: rotate(-45deg);
+}
+@media (min-width: 801px) {
+  .nav-close {
+    display: none;
+  }
+}
+
+/* Универсальное позиционирование названия и цены */
+.name-price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  font-size: 20px;
+  border-bottom: 1px solid #43424249;
+  gap: 10px;
+}
+
+.clay-name {
+  font-size: 25px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.clay-price-wrapper {
+  margin-left: 0;
+}
+
+.clay-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+
+
+  .clay-price {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  .li-order {
+    text-align: center;
+    margin-top: 12px;
+    padding-left: 10px;
+    padding-right: 32px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 22px;
+  }
+
+
+  .get-conditions-wrapper{
+    padding: 0;
+  }
+
+  .special-for-studios-wrapper{
+    padding: 0;
+  }
+}
+
+@media(max-width: 477px){
+  .sample-order-button{
+    margin-top: 250px;
+  }
+
+  
+}</style>
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="header-logo-wrapper">
-                <img src="assets/logo.png" alt="" class="header-logo">
+                <img src="/assets/logo.png" alt="" class="header-logo">
                 <div class="burger" id="burger-menu">
                   <span></span>
                   <span></span>
@@ -935,7 +1428,7 @@ html, body {
   <div class="promo-swiper swiper">
     <div class="swiper-wrapper">
       <!-- Slide 1 -->
-      <div class="swiper-slide" style="background-image: url('assets/background.jpeg');">
+      <div class="swiper-slide" style="background-image: url('/assets/background.jpeg');">
         <div class="promo-main-wrapper">
           <p class="promo-main">
             <span class="promo-main-title">
@@ -952,7 +1445,7 @@ html, body {
         </div>
       </div>
       <!-- Slide 2 -->
-      <div class="swiper-slide" style="background-image: url('assets/background2.jpeg');">
+      <div class="swiper-slide" style="background-image: url('/assets/background2.jpeg');">
         <div class="special-for-studios-wrapper">
           <div class="special-for-studios">
             <p class="for-studios">
@@ -1096,8 +1589,7 @@ html, body {
   </div>
 </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        document.getElementById('scroll-to-clays').addEventListener('click', function() {
+    <script>document.getElementById('scroll-to-clays').addEventListener('click', function() {
     const el = document.getElementById('product-cards');
     const header = document.querySelector('.header');
     const headerOffset = header ? header.getBoundingClientRect().height : 100;
@@ -1274,7 +1766,6 @@ window.addEventListener('resize', () => {
       prevEl: '.swiper-button-prev',
     },
     autoHeight: true
-  });
-    </script>
+  });</script>
 </body>
 </html>
