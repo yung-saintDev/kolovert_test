@@ -853,64 +853,73 @@ html, body {
 
 /* Studio popup adaptive styles */
 
-
 @media (max-width: 500px) {
-    .ul-header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .studio-popup-box {
+  .studio-popup {
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 6vw;
+  }
+  .studio-popup-box {
     min-width: unset;
     max-width: 98vw;
     width: 98vw;
-    padding: 10px 2vw;
-    border-radius: 10px;
+    padding: 18px 2vw 16px 2vw;
+    border-radius: 12px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.13);
+    text-align: center;
   }
   .studio-popup-title {
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 12px;
+    font-size: 18px;
+    margin-bottom: 18px;
+    margin-top: 18px;
+    font-weight: 500;
+    line-height: 1.2;
   }
-  .studio-input {
-    font-size: 14px;
-    padding: 8px;
-    border-radius: 5px;
-  }
-  .studio-btn, .studio-btn-main, .studio-btn-cancel {
-    font-size: 16px;
-    padding: 12px 0;
-    width: 48%;
-    min-width: 110px;
-    margin: 0 1%;
-    box-sizing: border-box;
-  }
-
-    #studio-form {
+  #studio-form {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
     gap: 0;
-  }
-
-  .studio-popup-message {
-    font-size: 15px;
-    text-align: center;
-    margin-top: 10px;
-  }
-
-    .studio-btn-main,
-  .studio-btn-cancel {
-    margin-top: 10px;
+    align-items: stretch;
     width: 100%;
-    min-width: unset;
+  }
+  .studio-input {
+    font-size: 16px;
+    padding: 12px 10px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    background: #fafafa;
+  }
+  .studio-btn {
+    font-size: 17px;
+    padding: 14px 0;
+    border-radius: 8px;
+    width: 100%;
+    margin: 10px 0 0 0;
+    box-sizing: border-box;
     display: block;
   }
-
-    #studio-form {
-    flex-direction: column;
+  .studio-btn-main {
+    background: #a33232;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 0;
   }
-
+  .studio-btn-cancel {
+    background: #888;
+    color: #fff;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  .studio-popup-message {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+    line-height: 1.3;
+    word-break: break-word;
+  }
 }
 
 /* Make sure popup is always centered */
@@ -1291,14 +1300,14 @@ html, body {
     width: 375px;
 }
 
+.product-button{
+  height: 50px;
+}
+
 }
 
 
 
-@media (max-width: 500px) {
-
-
-}
 
 /* Cross (close) button for mobile nav */
 .nav-close {
@@ -1399,6 +1408,16 @@ html, body {
   }
 
   
+}
+
+@media(max-width: 435px){
+  .product-card{
+    width: 350px;
+    height: 630px;
+  }
+  .add-button-wrapper{
+    margin-top: 12px;
+  }
 }</style>
 </head>
 <body>
