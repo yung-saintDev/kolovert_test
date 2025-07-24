@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/website/clays/venus/venus.css">
     <style>*{
     margin: 0;
     padding: 0;
@@ -20,7 +21,7 @@ body{
 }
 
 .header{
-    height: 100px;
+    height: 120px;
     position: fixed;
     top: 0;
     left: 0;
@@ -45,15 +46,17 @@ body{
     color: rgb(0, 0, 0);
 }
 
-.header-logo-wrapper{
-    margin-left: 30px;
-}
 
 .header-logo{
     width: 260px;
     height: 75px;
     user-select: none;
 }
+
+  .header-logo-wrapper {
+    margin-left: 20px;
+    height: 75px;
+  }
 
 
 .ul-header{
@@ -192,10 +195,7 @@ body{
     margin-right: 60px;
 }
 
-.img-card-wrapper{
-    display: flex;
-    justify-content: center;
-}
+
 
 .card-img{
     height: 360px;
@@ -554,43 +554,61 @@ body{
 
 
 @media (max-width: 954px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-        height: auto;
+
+    .main{
+        margin: 0;
+        margin-top: 150px;
+    }
+
+
+    .nav-header-wrapper{
+        margin: 0;
     }
 
     .header {
-        height: auto;
-    }
-
-    .header-logo-wrapper {
-        margin-left: 0;
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    .header-logo{
-    width: 280px;
-    height: auto;
-    user-select: none;
-}
-
-
-    .nav-header-wrapper {
-        margin: 20px 0;
-    }
-
-    .ul-header {
-        flex-wrap: wrap;
+        height: 90px;
+        display: flex;
+        align-items: center;
         justify-content: center;
-        gap: 10px;
+        padding: 0;
     }
 
-    .li-header {
-        font-size: 16px;
-        margin: 0;
+    .container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 10px;
+        margin-top: 0;
     }
+  .header-logo-wrapper {
+    height: 47.81px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1 1 auto;
+  }
+  .header-logo {
+    margin-left: 0;
+    margin-right: 0;
+    width: 170px;
+    height: auto;
+  }
+
+    .header-logo {
+        width: 170px;
+        height: auto;
+        user-select: none;
+    }
+
+
+
+
 
     .description-main-wrapper {
         margin: 30px 20px 0 20px;
@@ -625,6 +643,20 @@ body{
     font-weight: 450;
 }
 
+.order-form{
+    width: 90%;
+}
+
+.order-input{
+    width: 80%;
+}
+
+.order-label{
+    margin-left: 40px;
+}
+
+
+
 }
 
 @media (max-width: 500px) {
@@ -640,7 +672,7 @@ body{
     <header class="header">
         <div class="container">
             <div class="header-logo-wrapper">
-                <img src="logo.png" alt="" class="header-logo">
+                <img src="assets/logo.png" alt="" class="header-logo">
             </div>
             <div class="nav-header-wrapper">
                     <ul class="ul-header">
@@ -660,11 +692,10 @@ body{
                         <p class="name-of-the-clay">Венера</p>
                     </div>
                     <form class="sample-order-form">
-                        <label class="order-label">Выберите вес глины:</label>
+                        <label class="order-label">Выберите вес упаковки:</label>
                         <select id="delivery-method" name="delivery-method" class="order-input" required>
                             <option value="" disabled selected>Выберите вес</option>
                             <option value="one">5</option>
-                            <option value="two">7.3</option>
                             <option value="three">10</option>
                         </select>
 
@@ -674,7 +705,9 @@ body{
                             <option value="cdek">СДЭК</option>
                             <option value="boxberry">Boxberry</option>
                             <option value="post">Почта России</option>
-                    
+                            <option value="pack">Пэк</option>
+                            <option value="delovieliniyi">Деловые линии</option>
+            
                         </select>
 
                         <label for="fio" class="order-label">ФИО:</label>
@@ -684,7 +717,7 @@ body{
                         <input type="tel" id="phone" name="phone" class="order-input" placeholder="+7 900 000 00 00" required>
 
                         <label for="address" class="order-label">Город и адрес пункта выдачи заказов:</label>
-                        <input type="text" id="address" name="address" class="order-input" placeholder="Город, улица, дом, квартира" required>
+                        <input type="text" id="address" name="address" class="order-input" placeholder="Город, улица, дом, квартира, индекс" required>
 
                         <button type="submit" class="order-submit-btn">Отправить заявку</button>
                     </form>
