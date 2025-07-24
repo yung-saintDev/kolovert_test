@@ -29,7 +29,7 @@ html, body {
 }
 
 .header {
-    height: 100px;
+    height: 120px;
     position: fixed;
     top: 0;
     left: 0;
@@ -54,8 +54,6 @@ html, body {
     height: 120px;
     width: 100%;
     max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 16px;
 }
 
 .no-style-link{
@@ -639,7 +637,36 @@ html, body {
 
 
 
+.ul-contacts{
+  list-style: none;
+}
 
+.li-contacts{
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.telegram-img{
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  margin-top: 2px;
+}
+
+.vk-img{
+  width: 45px;
+  height: 45px;
+  margin-right: 20px;
+}
+
+
+
+.footer-contact-imgs{
+  display: flex;
+}
 
 @media (max-width: 700px) {
   /* Header and container */
@@ -682,9 +709,7 @@ html, body {
 
   /* Product cards */
 
-  .add-button-wrapper {
-    margin-top: 40px;
-  }
+
 
   /* Footer */
   .footer {
@@ -692,9 +717,6 @@ html, body {
     padding: 30px 0;
   }
   .footer-text-wrapper {
-    height: 250px;
-    margin: 0;
-    padding: 0;
   }
 
   /* Studio popup */
@@ -1098,6 +1120,11 @@ html, body {
 }
 
 @media (max-width: 1139px) {
+
+  .clay-mars-wider{
+    width: 300px;
+  }
+  
   .product-cards {
     display: flex;
     flex-wrap: wrap;
@@ -1105,10 +1132,13 @@ html, body {
     gap: 18px;
   }
   .product-card {
-    width: 290px;          
-    height: 570px;        
-    margin: 0 20px 18px 20px;
+    width: 320px;
+    height: 570px;
+    margin: 0 10px 18px 10px;
     padding: 0 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .card-img {
     width: 306px;
@@ -1132,6 +1162,16 @@ html, body {
   }
   .add-button-wrapper {
     gap: 8px;
+  }
+}
+
+@media (max-width: 1115px) {
+  .product-card{
+    width: 300px;
+  }
+
+    .clay-mars-wider{
+    width: 280px;
   }
 }
 
@@ -1303,6 +1343,10 @@ html, body {
 .product-button{
   height: 50px;
 }
+
+  .clay-mars-wider{
+    width: 360px;
+  }
 
 }
 
@@ -1525,13 +1569,13 @@ html, body {
                     </div>
                     <div class="clay-description-wrapper">
                         <ul class="clay-description-ul">
-                            <li class="clay-description"><span class="grey-color-span">Цвет после обжига: </span>желто-террактовый</li>
+                            <li class="clay-description clay-mars-wider"><span class="grey-color-span">Цвет после обжига: </span>террактовый</li>
                             <li class="clay-description"><span class="grey-color-span">Процент шамота: </span> 0%</li>
                             <li class="clay-description"><span class="grey-color-span">Температура обжига: </span> 1000 - 1300 'C</li>
                         </ul>
                     </div>
                     <div class="add-button-wrapper">
-                        <a class="add-button product-button no-style-link" href="mars.html">купить</a>
+                        <a class="add-button product-button no-style-link" href="/website/clays/mars/mars.html">купить</a>
                         <a class="about-clay-button product-button no-style-link" href="">подробнее</a>
                     </div>
                 </div>
@@ -1555,7 +1599,7 @@ html, body {
                         </ul>
                     </div>
                     <div class="add-button-wrapper">
-                        <a class="add-button product-button no-style-link" href="jupiter.html">купить</a>
+                        <a class="add-button product-button no-style-link" href="/website/clays/jupiter/jupiter.html">купить</a>
                         <a class="about-clay-button product-button no-style-link" href="">подробнее</a>
                     </div>
                 </div>
@@ -1565,11 +1609,11 @@ html, body {
             <p class="pre-description-text">О нас</p>
         </div>
             <div class="description-main-wrapper" id="about">
-                <p class="description-main">
+                <div class="description-main">
                     Производство гончарных глин Коловерть расположено в самом сердце Центрального Черноземья — Рамонском районе Воронежской области.<br><br>
                     Регион с давних пор славился гончарным производством. Всего в 12 километрах от нашего производства расположено село Карачун — древнейший гончарный центр Воронежской губернии, выпускавший до 300 тысяч горшков в год, и обеспечивающий продукцией обширную территорию центра России.<br><br>
                     Пластичность, широкий диапазон спекания, низкое водопоглощение, и совместимость с большинством из представленных на рынке глазурей — все это делает глину Коловерть превосходным материалом для гончарного производства.
-                </p>
+            </div>
             </div>
 
         </div>
@@ -1577,18 +1621,21 @@ html, body {
     <footer class="footer">
         <div class="container-footer">
             <div class="footer-text-wrapper">
-                <!-- <p class="footer-text">© 2025 Коловерть</p>
-                <div class="contacts-text-wrapper">
-                    <p class="contacts-text">Контакты</p>
-                </div>
-                <div class="contacts-wrapper">
+                <div class="ul-contacts-wrapper">
                     <ul class="ul-contacts">
-                        <li class="li-contacts">+7 920 449 69 19</li>
-                        <li class="li-contacts">mail@mail.ru</li>
-                        <li class="li-contacts">Телеграм</li>
-                        <li class="li-contacts">Вк</li>
+                        <li class="li-contacts">+7 (950) 766-56-55</li>
+                        <li class="li-contacts">goncharnya.kolovert@gmail.com</li>
                     </ul>
-                </div> -->
+                    <div class="footer-contact-imgs">
+                    <div class="telegram-img-wrapper">
+                        <a href=" https://t.me/goncharnya_kolovert"><img src="assets/telegram.svg" alt="" class="telegram-img"></a>
+                    </div>
+                     <div class="vk-img-wrapper">
+                       <a href="https://vk.com/goncharnya_kolovert"><img src="assets/vk.svg" alt="" class="vk-img"></a> 
+                    </div>
+                </div>
+                </div>
+                </div>
             </div>
         </div>
     <!-- Popup for studio conditions -->
@@ -1683,6 +1730,16 @@ document.getElementById('studio-popup-close').onclick = function() {
     document.getElementById('studio-popup').style.display = 'none';
 };
 
+document.getElementById('scroll-to-contacts').addEventListener('click', function() {
+    const el = document.querySelector('footer');
+    const elementPosition = el.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+    });
+});
+
+
 document.getElementById('studio-form').onsubmit = async function(e) {
     e.preventDefault();
     const submitBtn = this.querySelector('.studio-btn-main');
@@ -1723,7 +1780,7 @@ document.getElementById('studio-form').onsubmit = async function(e) {
 
     const message =
         "Новая заявка для студии:\n" +
-        "Город:\n" + city +
+        "Город: " + city + "\n" +
         "Название студии: " + name + "\n" +
         "Телефон: " + phone + "\n" +
         "E-mail: " + mail + "\n" +
