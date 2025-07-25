@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Коловерть</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <style>*{
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
     margin: 0;
     padding: 0;
 }
@@ -26,7 +27,10 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+
 }
+
+
 
 .header {
     height: 120px;
@@ -305,6 +309,7 @@ html, body {
     overflow-wrap: anywhere;
 }
 
+
 .add-button-wrapper{
     display: flex;
     margin-top: 30px;
@@ -570,7 +575,7 @@ html, body {
 }
 
 .promo-hero {
-  width: 100vw;
+  width: 100%;
   min-height: 90vh;
   display: flex;
   align-items: stretch;
@@ -583,12 +588,13 @@ html, body {
 }
 
 .promo-swiper {
-  width: 100vw;
+  width: 100%;
   min-height: 90vh;
+  box-sizing: border-box;
 }
 
 .promo-swiper .swiper-slide {
-  width: 100vw;
+  width: 100%;
   min-height: 90vh;
   background-size: cover;
   background-position: center;
@@ -597,6 +603,7 @@ html, body {
   align-items: center;
   justify-content: center;
   position: relative;
+  box-sizing: border-box;
 }
 
 .promo-main-wrapper, .special-for-studios-wrapper, .get-conditions-wrapper {
@@ -682,7 +689,6 @@ html, body {
     align-items: center !important;
     justify-content: space-between !important;
     margin: 0 !important;
-    width: 100% !important;
     height: 70px;
     padding: 0 16px;
   }
@@ -1078,10 +1084,9 @@ html, body {
   width: 100%;
 }
 
-
-
-
-
+body > .main, body > .container-main {
+  overflow-x: hidden;
+}
 
 @media (max-width: 800px) {
   .container {
@@ -1108,9 +1113,9 @@ html, body {
     height: auto;
   }
   .burger {
+    margin-left: 200px;
     display: flex;
     margin-left: auto;
-    margin-right: 0;
     align-self: center;
   }
 
@@ -1131,19 +1136,16 @@ html, body {
     justify-content: center;
     gap: 18px;
   }
+
   .product-card {
     width: 320px;
-    height: 570px;
+    height: 600px;
     margin: 0 10px 18px 10px;
-    padding: 0 8px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  .card-img {
-    width: 306px;
-    height: 290px;
-  }
+
   .clay-name {
     font-size: 20px;
   }
@@ -1166,9 +1168,6 @@ html, body {
 }
 
 @media (max-width: 1115px) {
-  .product-card{
-    width: 300px;
-  }
 
     .clay-mars-wider{
     width: 280px;
@@ -1185,12 +1184,12 @@ html, body {
 
 /* --- Swiper pagination fix --- */
 .promo-swiper {
-  padding-bottom: 48px; /* enough space for dots */
   overflow: visible !important;
 }
 
 .swiper-pagination {
   display: none !important;
+  margin-bottom: 30px;
 }
 
 /* Align second slide text and button like the first slide */
@@ -1257,10 +1256,9 @@ html, body {
     gap: 18px;
   }
   .product-card {
-    width: 260px;          
+    width: 310px;          
     height: 590px;        
-    margin: 0 20px 18px 20px;
-    padding: 0 8px;
+    margin: 0 20px 0px 20px;
   }
   
   .card-img {
@@ -1299,12 +1297,109 @@ html, body {
 }
 
 
+@media(max-width: 1085px){
+    .product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+  .product-card {
+    width: 300px;          
+    height: 570px;        
+    margin: 0 20px 0px 20px;
+  }
+  
+  .card-img {
+    width: 280px;
+    height: 280px;
+  }
+  .clay-name {
+    font-size: 20px;
+  }
+  .clay-price {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+
+  .venus-clay-price {
+    margin-left: -15px;
+  }
+  
+  .jupiter-clay-price {
+    margin-left: -20px;
+  }
+
+  .clay-description {
+    font-size: 15px;
+  }
+  .product-button {
+    width: 100%;
+    min-width: 0;
+    font-size: 15px;
+    height: 40px;
+    padding: 0 6px;
+  }
+  .add-button-wrapper {
+    gap: 8px;
+  }
+}
+
+@media(max-width: 1067px){
+    .product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+  .product-card {
+    width: 290px;          
+    height: 570px;        
+    margin: 0 10px 50px 10px;
+  }
+  
+  .card-img {
+    width: 280px;
+    height: 280px;
+  }
+  .clay-name {
+    font-size: 20px;
+  }
+  .clay-price {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+
+  .venus-clay-price {
+    margin-left: -15px;
+  }
+  
+  .jupiter-clay-price {
+    margin-left: -20px;
+  }
+
+  .clay-description {
+    font-size: 15px;
+  }
+  .product-button {
+    width: 100%;
+    min-width: 0;
+    font-size: 15px;
+    height: 40px;
+    padding: 0 6px;
+  }
+  .add-button-wrapper {
+    gap: 8px;
+  }
+}
+
 @media(max-width: 995px){
     .product-cards-wrapper {
         display: flex;
         justify-content: center; 
         width: 100%;
     }
+    
 
     .product-cards{
         display: block;
@@ -1450,19 +1545,62 @@ html, body {
   .sample-order-button{
     margin-top: 250px;
   }
-
-  
 }
 
 @media(max-width: 435px){
+
+  .product-cards-wrapper{
+    margin-top: 30px;
+  }
   .product-card{
-    width: 350px;
-    height: 630px;
+    width: 300px;
+    height: 590px;
   }
   .add-button-wrapper{
-    margin-top: 12px;
+    margin-top: 20px;
   }
-}</style>
+}
+
+/* Show dots for product card swipers */
+.clay-swiper .swiper-pagination {
+  display: block !important;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.clay-swiper .swiper-pagination-bullet {
+  background: #434242 !important; /* dark color for inactive */
+  opacity: 1;
+}
+
+.clay-swiper .swiper-pagination-bullet-active {
+  background: #a33232 !important;
+  opacity: 1;
+}
+
+/* Add or update these styles: */
+.promo-swiper .swiper-pagination {
+  display: block !important;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.promo-swiper .swiper-pagination-bullet {
+  background: #434242 !important;
+  opacity: 1;
+}
+
+.promo-swiper .swiper-pagination-bullet-active {
+  background: #a33232 !important;
+  opacity: 1;}
+    </style>
 </head>
 <body>
     <header class="header">
@@ -1490,7 +1628,6 @@ html, body {
             <div class="promo-hero">
   <div class="promo-swiper swiper">
     <div class="swiper-wrapper">
-      <!-- Slide 1 -->
       <div class="swiper-slide" style="background-image: url('assets/background.jpeg');">
         <div class="promo-main-wrapper">
           <p class="promo-main">
@@ -1507,7 +1644,6 @@ html, body {
           </div>
         </div>
       </div>
-      <!-- Slide 2 -->
       <div class="swiper-slide" style="background-image: url('assets/background2.jpeg');">
         <div class="special-for-studios-wrapper">
           <div class="special-for-studios">
@@ -1525,94 +1661,112 @@ html, body {
       </div>
     </div>
     <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
   </div>
 </div>
                 <div class="product-cards-wrapper" id="product-cards">
-            <div class="product-cards">
-                <div class="product-card">
-                    <div class="img-card-wrapper">
-                        <img src="" alt="" class="card-img">
+    <div class="product-cards">
+        <!-- Венера -->
+        <div class="product-card">
+            <div class="img-card-wrapper">
+                <div class="swiper clay-swiper clay-swiper-venus">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="assets/venus.png" alt="Венера 1" class="card-img"></div>
+                        <div class="swiper-slide"><img src="assets/venuscolor.PNG" alt="Венера 2" class="card-img"></div>
                     </div>
-                    <div class="name-price-wrapper">
-                    <div class="clay-name-wrapper">
-                        <p class="clay-name">Венера</p>
-                    </div>
-                    <div class="clay-price-wrapper">
-                        <p class="clay-price">130₽/кг</p>
-                    </div>
-                    </div>
-                    <div class="clay-description-wrapper">
-                        <ul class="clay-description-ul">
-                            <li class="clay-description"><span class="grey-color-span">Цвет после обжига: </span>светло-серый</li>
-                            <li class="clay-description"><span class="grey-color-span">Процент шамота: </span> 0%</li>
-                            <li class="clay-description"><span class="grey-color-span">Температура обжига: </span> 1000 - 1300 'C</li>
-                        </ul>
-                    </div>
-                    <div class="add-button-wrapper">
-                        <a class="add-button product-button no-style-link" href="venus.html">купить</a>
-                        <a class="about-clay-button product-button no-style-link" href="">подробнее</a>
-                    </div>
-                </div>
-                  <div class="product-card">
-                    <div class="img-card-wrapper">
-                        <img src="" alt="" class="card-img">
-                    </div>
-                    <div class="name-price-wrapper">
-                    <div class="clay-name-wrapper">
-                        <p class="clay-name">Марс</p>
-                    </div>
-                    <div class="clay-price-wrapper">
-                        <p class="clay-price">130₽/кг</p>
-                    </div>
-                    </div>
-                    <div class="clay-description-wrapper">
-                        <ul class="clay-description-ul">
-                            <li class="clay-description clay-mars-wider"><span class="grey-color-span">Цвет после обжига: </span>террактовый</li>
-                            <li class="clay-description"><span class="grey-color-span">Процент шамота: </span> 0%</li>
-                            <li class="clay-description"><span class="grey-color-span">Температура обжига: </span> 1000 - 1300 'C</li>
-                        </ul>
-                    </div>
-                    <div class="add-button-wrapper">
-                        <a class="add-button product-button no-style-link" href="/website/clays/mars/mars.html">купить</a>
-                        <a class="about-clay-button product-button no-style-link" href="">подробнее</a>
-                    </div>
-                </div>
-                  <div class="product-card">
-                    <div class="img-card-wrapper">
-                        <img src="" alt="" class="card-img">
-                    </div>
-                    <div class="name-price-wrapper">
-                    <div class="clay-name-wrapper">
-                        <p class="clay-name">Юпитер</p>
-                    </div>
-                    <div class="clay-price-wrapper">
-                        <p class="clay-price">130₽/кг</p>
-                    </div>
-                    </div>
-                    <div class="clay-description-wrapper">
-                        <ul class="clay-description-ul">
-                            <li class="clay-description"><span class="grey-color-span">Цвет после обжига: </span>темно-серый</li>
-                            <li class="clay-description"><span class="grey-color-span">Процент шамота: </span> 0%</li>
-                            <li class="clay-description"><span class="grey-color-span">Температура обжига: </span> 1000 - 1300 'C</li>
-                        </ul>
-                    </div>
-                    <div class="add-button-wrapper">
-                        <a class="add-button product-button no-style-link" href="/website/clays/jupiter/jupiter.html">купить</a>
-                        <a class="about-clay-button product-button no-style-link" href="">подробнее</a>
-                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
+            <div class="name-price-wrapper">
+            <div class="clay-name-wrapper">
+                <p class="clay-name">Венера</p>
+            </div>
+            <div class="clay-price-wrapper">
+                <p class="clay-price">130₽/кг</p>
+            </div>
+            </div>
+            <div class="clay-description-wrapper">
+                <ul class="clay-description-ul">
+                    <li class="clay-description"><span class="grey-color-span">Цвет после обжига: </span>белый</li>
+                    <li class="clay-description"><span class="grey-color-span">Процент шамота: </span> 0%</li>
+                    <li class="clay-description"><span class="grey-color-span">Температура обжига: </span> 1000 - 1300 'C</li>
+                </ul>
+            </div>
+            <div class="add-button-wrapper">
+                <a class="add-button product-button no-style-link" href="venus.html">купить</a>
+                <a class="about-clay-button product-button no-style-link" href="">подробнее</a>
+            </div>
         </div>
+        <!-- Марс -->
+        <div class="product-card">
+            <div class="img-card-wrapper">
+                <div class="swiper clay-swiper clay-swiper-mars">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="assets/mars.png" alt="Марс 1" class="card-img"></div>
+                        <div class="swiper-slide"><img src="assets/marscolor.PNG" alt="Марс 2" class="card-img"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="name-price-wrapper">
+            <div class="clay-name-wrapper">
+                <p class="clay-name">Марс</p>
+            </div>
+            <div class="clay-price-wrapper">
+                <p class="clay-price">130₽/кг</p>
+            </div>
+            </div>
+            <div class="clay-description-wrapper">
+                <ul class="clay-description-ul">
+                    <li class="clay-description clay-mars-wider"><span class="grey-color-span">Цвет после обжига: </span>террактовый</li>
+                    <li class="clay-description"><span class="grey-color-span">Процент шамота: </span> 0%</li>
+                    <li class="clay-description"><span class="grey-color-span">Температура обжига: </span> 1000 - 1300 'C</li>
+                </ul>
+            </div>
+            <div class="add-button-wrapper">
+                <a class="add-button product-button no-style-link" href="mars.html">купить</a>
+                <a class="about-clay-button product-button no-style-link" href="">подробнее</a>
+            </div>
+        </div>
+        <!-- Юпитер -->
+        <div class="product-card">
+            <div class="img-card-wrapper">
+                <div class="swiper clay-swiper clay-swiper-jupiter">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="assets/jupiter.png" alt="Юпитер 1" class="card-img"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="name-price-wrapper">
+            <div class="clay-name-wrapper">
+                <p class="clay-name">Юпитер</p>
+            </div>
+            <div class="clay-price-wrapper">
+                <p class="clay-price">130₽/кг</p>
+            </div>
+            </div>
+            <div class="clay-description-wrapper">
+                <ul class="clay-description-ul">
+                    <li class="clay-description"><span class="grey-color-span">Цвет после обжига: </span>темно-серый</li>
+                    <li class="clay-description"><span class="grey-color-span">Процент шамота: </span> 0%</li>
+                    <li class="clay-description"><span class="grey-color-span">Температура обжига: </span> 1000 - 1300 'C</li>
+                </ul>
+            </div>
+            <div class="add-button-wrapper">
+                <a class="add-button product-button no-style-link" href="jupiter.html">купить</a>
+                <a class="about-clay-button product-button no-style-link" href="jupiterdescription.html">подробнее</a>
+            </div>
+        </div>
+    </div>
+</div>
         <div class="pre-description-text-wrapper">
             <p class="pre-description-text">О нас</p>
         </div>
             <div class="description-main-wrapper" id="about">
                 <div class="description-main">
                     Производство гончарных глин Коловерть расположено в самом сердце Центрального Черноземья — Рамонском районе Воронежской области.<br><br>
-                    Регион с давних пор славился гончарным производством. Всего в 12 километрах от нашего производства расположено село Карачун — древнейший гончарный центр Воронежской губернии, выпускавший до 300 тысяч горшков в год, и обеспечивающий продукцией обширную территорию центра России.<br><br>
-                    Пластичность, широкий диапазон спекания, низкое водопоглощение, и совместимость с большинством из представленных на рынке глазурей — все это делает глину Коловерть превосходным материалом для гончарного производства.
+                    Регион с давних пор славился гончарным промыслом. Всего в 12 километрах от нашего производства расположено село Карачун — древнейший гончарный центр Воронежской губернии, выпускавший до 300 тысяч горшков в год, и обеспечивающий продукцией обширную территорию центра России.<br><br>
+                    Невероятная пластичность, широкий диапазон спекания, низкое водопоглощение и совместимость с большинством из представленных на рынке глазурей — все это делает глину Коловерть превосходным материалом для гончарного дела.
             </div>
             </div>
 
@@ -1637,7 +1791,7 @@ html, body {
                 </div>
                 </div>
             </div>
-        </div>
+    </footer>
     <!-- Popup for studio conditions -->
 <div id="studio-popup" class="studio-popup">
   <div class="studio-popup-box">
@@ -1655,7 +1809,14 @@ html, body {
   </div>
 </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>document.getElementById('scroll-to-clays').addEventListener('click', function() {
+    <script>function closeBurgerMenu() {
+  const nav = document.querySelector('.nav-header-wrapper');
+  const burger = document.getElementById('burger-menu');
+  nav.classList.remove('nav-open');
+  burger.classList.remove('burger-open');
+}
+
+document.getElementById('scroll-to-clays').addEventListener('click', function() {
     const el = document.getElementById('product-cards');
     const header = document.querySelector('.header');
     const headerOffset = header ? header.getBoundingClientRect().height : 100;
@@ -1666,6 +1827,7 @@ html, body {
         top: offsetPosition,
         behavior: 'smooth'
     });
+    closeBurgerMenu();
 });
 
 document.getElementById('scroll-to-clays-order').addEventListener('click', function() {
@@ -1679,19 +1841,32 @@ document.getElementById('scroll-to-clays-order').addEventListener('click', funct
         top: offsetPosition,
         behavior: 'smooth'
     });
+    closeBurgerMenu();
 });
 
 
 document.getElementById('scroll-to-about').addEventListener('click', function() {
     const el = document.getElementById('about');
-    const headerOffset = 250;
-    const elementPosition = el.getBoundingClientRect().top + window.pageYOffset;
-    const offsetPosition = elementPosition - headerOffset;
+    const header = document.querySelector('.header');
+    const headerOffset = header ? header.getBoundingClientRect().height : 100;
+    const elementPosition = el.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = Math.round(elementPosition - headerOffset);
 
     window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth'
     });
+    closeBurgerMenu();
+});
+
+document.getElementById('scroll-to-contacts').addEventListener('click', function() {
+    const el = document.querySelector('footer');
+    const elementPosition = el.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+    });
+    closeBurgerMenu();
 });
 
 document.addEventListener('DOMContentLoaded', function() {
