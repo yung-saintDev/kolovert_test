@@ -9,8 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
-    <style>
-        *{
+    <style>*{
     margin: 0;
     padding: 0;
 }
@@ -454,7 +453,7 @@ html, body {
 
 
     .special-for-studios-wrapper{
-        margin-top: 120px;
+        margin-bottom: 10px;
     }
 
     .special-for-studios{
@@ -673,6 +672,75 @@ html, body {
 
 .footer-contact-imgs{
   display: flex;
+}
+
+.about-block {
+  background: #fff;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 32px 24px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.about-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.about-text {
+  line-height: 1.3;
+  color: #222;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+
+.about-creating{
+  width: 450px;
+}
+
+.about-img {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.clay-img{
+  margin-top: -20px;
+}
+
+.about-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px #0002;
+  object-fit: cover;
+  min-width: 260px;
+  max-height: 320px;
+}
+
+@media (max-width: 800px) {
+  .about-block {
+    padding: 16px 4vw;
+    max-width: 98vw;
+  }
+  .about-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .about-img img {
+    max-width: 100%;
+    max-height: 240px;
+  }
+  .about-text {
+    font-size: 1.05rem;
+  }
 }
 
 @media (max-width: 700px) {
@@ -1187,10 +1255,7 @@ body > .main, body > .container-main {
   overflow: visible !important;
 }
 
-.swiper-pagination {
-  display: none !important;
-  margin-bottom: 30px;
-}
+
 
 /* Align second slide text and button like the first slide */
 .promo-swiper .special-for-studios-wrapper,
@@ -1204,7 +1269,7 @@ body > .main, body > .container-main {
 }
 
 .promo-swiper .special-for-studios-wrapper {
-  margin-bottom: 0;
+  margin-bottom: -15px;
 }
 
 .promo-swiper .get-conditions-wrapper {
@@ -1219,8 +1284,10 @@ body > .main, body > .container-main {
 }
 
 /* Make the button on the second slide match the vertical position of the first slide */
-.promo-swiper .swiper-slide:nth-child(2) .conditions-button {
+ .conditions-button {
   margin-top: 100px;
+  margin-bottom: 150px;
+
 }
 
 .promo-swiper .swiper-slide:nth-child(2) .for-studios {
@@ -1570,6 +1637,7 @@ body > .main, body > .container-main {
   width: 100%;
   text-align: center;
   z-index: 10;
+  
 }
 
 .clay-swiper .swiper-pagination-bullet {
@@ -1578,29 +1646,79 @@ body > .main, body > .container-main {
 }
 
 .clay-swiper .swiper-pagination-bullet-active {
-  background: #a33232 !important;
+  background: #a33232 !important; /* red */
   opacity: 1;
 }
 
-/* Add or update these styles: */
+:root {
+  --swiper-theme-color: #a33232;
+}
+
 .promo-swiper .swiper-pagination {
   display: block !important;
   position: absolute;
   left: 0;
+  bottom: 16px;
   width: 100%;
   text-align: center;
   z-index: 10;
+  margin-bottom: 80px; /* add margin below the dots */
 }
 
-.promo-swiper .swiper-pagination-bullet {
-  background: #434242 !important;
-  opacity: 1;
+
+@media (min-width: 801px) {
+  .promo-swiper .swiper-pagination {
+    display: none !important;
+  }
+  .promo-swiper .swiper-button-prev,
+  .promo-swiper .swiper-button-next {
+    display: flex !important;
+  }
 }
 
-.promo-swiper .swiper-pagination-bullet-active {
-  background: #a33232 !important;
-  opacity: 1;}
-    </style>
+/* Show dots and hide arrows on mobile */
+@media (max-width: 800px) {
+  .promo-swiper .swiper-pagination {
+    display: block !important;
+  }
+  .promo-swiper .swiper-button-prev,
+  .promo-swiper .swiper-button-next {
+    display: none !important;
+  }
+}
+
+.img-popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+.img-popup.open {
+  display: flex;
+}
+.img-popup-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 4px 32px #000a;
+}
+.img-popup-close {
+  position: absolute;
+  top: 32px;
+  right: 48px;
+  color: #fff;
+  font-size: 48px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+  transition: color 0.2s;
+}
+.img-popup-close:hover {
+  color: #a33232;
+}</style>
 </head>
 <body>
     <header class="header">
@@ -1661,6 +1779,8 @@ body > .main, body > .container-main {
       </div>
     </div>
     <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   </div>
 </div>
                 <div class="product-cards-wrapper" id="product-cards">
@@ -1732,7 +1852,7 @@ body > .main, body > .container-main {
             <div class="img-card-wrapper">
                 <div class="swiper clay-swiper clay-swiper-jupiter">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="assets/jupiter.png" alt="Юпитер 1" class="card-img"></div>
+                        <div class="swiper-slide"><img src="/assets/jupiter.png" alt="Юпитер 1" class="card-img"></div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -1754,7 +1874,7 @@ body > .main, body > .container-main {
             </div>
             <div class="add-button-wrapper">
                 <a class="add-button product-button no-style-link" href="jupiter.html">купить</a>
-                <a class="about-clay-button product-button no-style-link" href="jupiterdescription.html">подробнее</a>
+                <a class="about-clay-button product-button no-style-link" href="/website/aboutpage/jupiter description/jupiterdescription.html">подробнее</a>
             </div>
         </div>
     </div>
@@ -1762,14 +1882,32 @@ body > .main, body > .container-main {
         <div class="pre-description-text-wrapper">
             <p class="pre-description-text">О нас</p>
         </div>
-            <div class="description-main-wrapper" id="about">
-                <div class="description-main">
-                    Производство гончарных глин Коловерть расположено в самом сердце Центрального Черноземья — Рамонском районе Воронежской области.<br><br>
-                    Регион с давних пор славился гончарным промыслом. Всего в 12 километрах от нашего производства расположено село Карачун — древнейший гончарный центр Воронежской губернии, выпускавший до 300 тысяч горшков в год, и обеспечивающий продукцией обширную территорию центра России.<br><br>
-                    Невероятная пластичность, широкий диапазон спекания, низкое водопоглощение и совместимость с большинством из представленных на рынке глазурей — все это делает глину Коловерть превосходным материалом для гончарного дела.
-            </div>
-            </div>
-
+                        <div class="about-block">
+  <div class="about-row">
+    <div class="about-text about-creating">
+      Производство гончарных глин Коловерть расположено в самом сердце Центрального Черноземья – Рамонском районе Воронежской области.
+    </div>
+    <div class="about-img">
+      <img src="assets/dmitriy.jpg" alt="Производство Коловерть">
+    </div>
+  </div>
+  <div class="about-row">
+    <div class="about-img hands-img">
+      <img src="assets/clayhands.jpg" alt="Руки мастера">
+    </div>
+    <div class="about-text">
+      Регион с давних пор славился гончарным производством. Всего в 12 километрах от нашего производства расположено село Карачун – древнейший гончарный центр Воронежской губернии, выпускавший до 300 тысяч горшков в год, и обеспечивающий продукцией обширную территорию центра России.
+    </div>
+  </div>
+  <div class="about-row">
+    <div class="about-text">
+      Пластичность, широкий диапазон спекания, низкое водопоглощение, и совместимость с большинством из представленных на рынке глазурей – все это делает глину Коловерть превосходным материалом для гончарного производства.
+    </div>
+    <div class="about-img clay-img">
+      <img src="assets/clayimg.jpg" alt="Глина Коловерть">
+    </div>
+  </div>
+</div>
         </div>
     </main>
     <footer class="footer">
@@ -1807,6 +1945,11 @@ body > .main, body > .container-main {
     </form>
     <p id="studio-popup-message" class="studio-popup-message"></p>
   </div>
+</div>
+<!-- Popup for image enlargement -->
+<div id="img-popup" class="img-popup">
+  <span class="img-popup-close">&times;</span>
+  <img class="img-popup-content" src="" alt="">
 </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>function closeBurgerMenu() {
@@ -1961,8 +2104,8 @@ document.getElementById('studio-form').onsubmit = async function(e) {
         "E-mail: " + mail + "\n" +
         "ФИО: " + fio;
 
-    const token = "7603232893:AAGIs6maIWXpomDTwp9r1KkzfXFBxU25QpY";
-    const chatId = 1047807309;
+    const token = "123123123";
+    const chatId = 123123123;
     const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
     try {
@@ -2009,14 +2152,41 @@ window.addEventListener('resize', () => {
   const promoSwiper = new Swiper('.promo-swiper', {
     loop: false,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.promo-swiper .swiper-pagination',
       clickable: true,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.promo-swiper .swiper-button-next',
+      prevEl: '.promo-swiper .swiper-button-prev',
     },
-    autoHeight: true
-  });</script>
+    autoHeight: true,
+  });
+
+document.querySelectorAll('.clay-swiper').forEach(function(swiperEl) {
+  new Swiper(swiperEl, {
+    pagination: {
+      el: swiperEl.querySelector('.swiper-pagination'),
+      clickable: true,
+    },
+    loop: false,
+  });
+});
+
+document.querySelectorAll('.about-img img').forEach(img => {
+  img.style.cursor = 'zoom-in';
+  img.addEventListener('click', function() {
+    const popup = document.getElementById('img-popup');
+    const popupImg = popup.querySelector('.img-popup-content');
+    popupImg.src = this.src;
+    popup.classList.add('open');
+  });
+});
+
+document.querySelector('.img-popup-close').onclick = function() {
+  document.getElementById('img-popup').classList.remove('open');
+};
+document.getElementById('img-popup').onclick = function(e) {
+  if (e.target === this) this.classList.remove('open');
+};</script>
 </body>
 </html>
