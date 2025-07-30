@@ -744,7 +744,6 @@ html, body {
 }
 
 @media (max-width: 700px) {
-  /* Header and container */
   .header {
     height: 70px;
     display: flex;
@@ -781,19 +780,11 @@ html, body {
     margin-bottom: 18px;
   }
 
-  /* Product cards */
-
-
-
-  /* Footer */
   .footer {
     height: 250px;
     padding: 30px 0;
   }
-  .footer-text-wrapper {
-  }
 
-  /* Studio popup */
   .studio-popup-box {
     min-width: 90vw;
     max-width: 98vw;
@@ -844,14 +835,10 @@ html, body {
   .header-logo {
     width: 220px;
     height: auto;
+    margin-left: 30px;
   }
 }
-@media (max-width: 954px) {
-  .header-logo {
-    width: 200px;
-    height: auto;
-  }
-}
+
 @media (max-width: 800px) {
   .header-logo {
     width: 170px;
@@ -875,77 +862,13 @@ html, body {
 
 @media (max-width: 954px) {
     .container {
-        flex-direction: column;
         align-items: center;
         height: auto;
     }
-
-    .header {
-        height: auto;
-    }
-
-    .header-logo-wrapper {
-        margin-left: 0;
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    .header-logo{
-    width: 280px;
-    height: auto;
-    user-select: none;
 }
 
 
-    .nav-header-wrapper {
-        margin: 20px 0;
-    }
 
-    .ul-header {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .li-header {
-        font-size: 16px;
-        margin: 0;
-    }
-
-    .description-main-wrapper {
-        margin: 30px 20px 0 20px;
-        text-align: center;
-    }
-
-    .description-main {
-        font-size: 20px;
-        width: 100%;
-    }
-
-    .sample-order-button-wrapper {
-        height: auto;
-        padding: 30px 0;
-    }
-
-    .sample-order-button {
-        font-size: 18px;
-        padding: 10px 14px;
-    }
-
-    .test-clay-description-wrapper{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.test-clay-description{
-    font-size: 25px;
-    font-weight: 450;
-}
-
-}
 
 /* Studio popup adaptive styles */
 
@@ -1131,7 +1054,7 @@ html, body {
   margin-bottom: 0;
   padding-top: 0;
   box-sizing: border-box;
-  background: url('/assets/background.jpeg') center center/cover no-repeat;
+  background: url('assets/background.jpeg') center center/cover no-repeat;
   position: relative;
   z-index: 1;
 }
@@ -1250,14 +1173,10 @@ body > .main, body > .container-main {
   background: none !important;
 }
 
-/* --- Swiper pagination fix --- */
 .promo-swiper {
   overflow: visible !important;
 }
 
-
-
-/* Align second slide text and button like the first slide */
 .promo-swiper .special-for-studios-wrapper,
 .promo-swiper .get-conditions-wrapper {
   width: 100%;
@@ -1283,7 +1202,6 @@ body > .main, body > .container-main {
   text-align: center;
 }
 
-/* Make the button on the second slide match the vertical position of the first slide */
  .conditions-button {
   margin-top: 100px;
   margin-bottom: 150px;
@@ -1297,7 +1215,6 @@ body > .main, body > .container-main {
   display: block;
 }
 
-/* Центрируем текст на втором слайде Swiper */
 .promo-swiper .swiper-slide:nth-child(2) .special-for-studios,
 .promo-swiper .swiper-slide:nth-child(2) .for-studios {
   margin-left: 0 !important;
@@ -1314,6 +1231,79 @@ body > .main, body > .container-main {
   margin-top: 8px;
 }
 
+.first-row{
+  display: flex;
+  justify-content: center;
+
+}
+
+.about-us-wrapper{
+  justify-content: center;
+  display: flex;
+  margin-top: 50px;
+}
+
+
+.about-text-bold{
+  display: block;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.text-about-us{
+  font-size: 22px;;
+}
+
+.about-text-column{
+  margin-top: 50px;
+}
+
+.about-person-img{
+  width: 300px;
+  height: auto;
+}
+
+.small-text-wrapper{
+  margin-top: 20px;
+}
+
+.small-text-wrapper-two{
+  margin-top: 25px;
+}
+
+.person-img-wrapper{
+  margin-left: 25px;
+}
+
+.second-row{
+  display: flex;
+}
+
+.about-two-pictures-wrapper{
+  margin-top: 50px;
+}
+
+.about-row-pictures{
+  width: 220px;
+  height: auto;
+}
+
+.small-text-wrapper-final{
+  margin-left: 50px;
+  margin-top: 25px;
+}
+
+.small-text-wrapper-three{
+  margin-top: 15px;
+}
+
+.clay-hands-img{
+  height: 330.3px;
+}
+
+.about-adaptive-text-block{
+  display: none;
+}
 
 @media(max-width: 1085px){
     .product-cards {
@@ -1512,10 +1502,6 @@ body > .main, body > .container-main {
 
 }
 
-
-
-
-/* Cross (close) button for mobile nav */
 .nav-close {
   position: absolute;
   top: 32px;
@@ -1549,7 +1535,6 @@ body > .main, body > .container-main {
   }
 }
 
-/* Универсальное позиционирование названия и цены */
 .name-price-wrapper {
   display: flex;
   justify-content: space-between;
@@ -1628,7 +1613,6 @@ body > .main, body > .container-main {
   }
 }
 
-/* Show dots for product card swipers */
 .clay-swiper .swiper-pagination {
   display: block !important;
   position: absolute;
@@ -1641,12 +1625,12 @@ body > .main, body > .container-main {
 }
 
 .clay-swiper .swiper-pagination-bullet {
-  background: #434242 !important; /* dark color for inactive */
+  background: #434242 !important; 
   opacity: 1;
 }
 
 .clay-swiper .swiper-pagination-bullet-active {
-  background: #a33232 !important; /* red */
+  background: #a33232 !important;
   opacity: 1;
 }
 
@@ -1662,7 +1646,7 @@ body > .main, body > .container-main {
   width: 100%;
   text-align: center;
   z-index: 10;
-  margin-bottom: 80px; /* add margin below the dots */
+  margin-bottom: 80px;
 }
 
 
@@ -1676,7 +1660,6 @@ body > .main, body > .container-main {
   }
 }
 
-/* Show dots and hide arrows on mobile */
 @media (max-width: 800px) {
   .promo-swiper .swiper-pagination {
     display: block !important;
@@ -1684,6 +1667,56 @@ body > .main, body > .container-main {
   .promo-swiper .swiper-button-prev,
   .promo-swiper .swiper-button-next {
     display: none !important;
+  }
+}
+
+@media(max-width: 1074px) {
+  .about-person-img{
+    width: 230px;
+    display: flex;
+  }
+
+
+
+  .person-img-wrapper{
+    display: flex;
+    align-items: center;
+  }
+
+  .about-text-column{
+    margin-top: 0;
+  }
+
+  .small-text-wrapper-final{
+    display: flex;
+    align-items: center;
+  }
+
+    .about-adaptive-text-block{
+  display: none;
+}
+}
+
+@media(max-width: 1000px) {
+  .text-about-us{
+    font-size: 18px;
+  }
+
+  .about-text-bold{
+    font-size: 25px;
+  }
+
+  .about-row-pictures{
+    height: 320px;
+    width: auto;
+  }
+
+  .small-text-wrapper-final{
+    margin-left: 20px;
+  }
+
+  .second-row{
+    margin-top: -35px;
   }
 }
 
@@ -1718,7 +1751,195 @@ body > .main, body > .container-main {
 }
 .img-popup-close:hover {
   color: #a33232;
-}</style>
+}
+
+@media (max-width: 895px) {
+  .about-person-img{
+    width: 300px;
+    display: flex;
+  }
+
+
+  .person-img-wrapper{
+    display: flex;
+    align-items: center;
+  }
+
+  .about-text-column{
+    margin-top: 0;
+  }
+
+  .small-text-wrapper-final{
+    display: flex;
+    align-items: center;
+  }
+
+  .about-text-column{
+    width: 400px;
+  }
+
+  .clay-onstone{
+    display: none;
+  }
+
+  .about-row-pictures{
+    width: 240px;
+    height: auto;
+  }
+
+  .text-about-larger-adaptive{
+    font-size: 20px;
+  }
+
+    .about-adaptive-text-block{
+  display: none;
+}
+}
+
+
+
+@media (max-width: 800px) {
+
+
+    .first-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .text-about-us{
+    font-size: 20px;
+  }
+
+  .about-text-column {
+    width: 600px;
+    text-align: justify;
+  }
+
+
+  
+
+  .about-text-bold {
+    font-size: 22px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .person-img-wrapper {
+    margin-left: 0;
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-person-img {
+    width: 350px;
+    height: auto;
+  }
+
+    .text-about-us{
+    font-size: 20px
+  }
+
+  .clay-hands-img{
+    width: 350px;
+  }
+
+  .bold-text-wrapper{
+    display: none;
+  }
+
+  .second-row {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 24px;
+    margin-top: 24px;
+  }
+
+  .about-two-pictures-wrapper {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+
+  .small-text-wrapper-final {
+    margin-left: 0;
+    margin-top: 0;
+    width: 95vw;
+    text-align: center;
+    display: block;
+  }
+
+  .about-text-column-two {
+    text-align: center;
+    margin: 0 auto 12px auto;
+  }
+
+  .small-text-wrapper-three {
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .about-text-column{
+    width: 100%;
+  }
+
+  .text-about-us-centred{
+    width: 68%;
+  }
+
+  .adaptive-display-none{
+    display: none;
+  }
+
+  .about-us-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.about-us {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+  .small-text-wrapper{
+    display: none;
+  }
+
+  .small-text-wrapper-two{
+    display: none;
+  }
+
+  .text-about-us-centred{
+    text-align:start;
+  }
+
+    .about-person-img{
+    width: 300px;
+  }
+
+  .clay-hands-img{
+    width: 300px;
+  }
+}
+
+</style>
 </head>
 <body>
     <header class="header">
@@ -1812,7 +2033,7 @@ body > .main, body > .container-main {
                 </ul>
             </div>
             <div class="add-button-wrapper">
-                <a class="add-button product-button no-style-link" href="venus.html">купить</a>
+                <a class="add-button product-button no-style-link" href="/website/clays/venus/venus.html">купить</a>
                 <a class="about-clay-button product-button no-style-link" href="">подробнее</a>
             </div>
         </div>
@@ -1843,7 +2064,7 @@ body > .main, body > .container-main {
                 </ul>
             </div>
             <div class="add-button-wrapper">
-                <a class="add-button product-button no-style-link" href="mars.html">купить</a>
+                <a class="add-button product-button no-style-link" href="/website/clays/mars/mars.html">купить</a>
                 <a class="about-clay-button product-button no-style-link" href="">подробнее</a>
             </div>
         </div>
@@ -1852,7 +2073,7 @@ body > .main, body > .container-main {
             <div class="img-card-wrapper">
                 <div class="swiper clay-swiper clay-swiper-jupiter">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="/assets/jupiter.png" alt="Юпитер 1" class="card-img"></div>
+                        <div class="swiper-slide"><img src="assets/jupiter.png" alt="Юпитер 1" class="card-img"></div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -1873,7 +2094,7 @@ body > .main, body > .container-main {
                 </ul>
             </div>
             <div class="add-button-wrapper">
-                <a class="add-button product-button no-style-link" href="jupiter.html">купить</a>
+                <a class="add-button product-button no-style-link" href="/website/clays/jupiter/jupiter.html">купить</a>
                 <a class="about-clay-button product-button no-style-link" href="/website/aboutpage/jupiter description/jupiterdescription.html">подробнее</a>
             </div>
         </div>
@@ -1882,32 +2103,92 @@ body > .main, body > .container-main {
         <div class="pre-description-text-wrapper">
             <p class="pre-description-text">О нас</p>
         </div>
-                        <div class="about-block">
-  <div class="about-row">
-    <div class="about-text about-creating">
-      Производство гончарных глин Коловерть расположено в самом сердце Центрального Черноземья – Рамонском районе Воронежской области.
-    </div>
-    <div class="about-img">
-      <img src="assets/dmitriy.jpg" alt="Производство Коловерть">
-    </div>
-  </div>
-  <div class="about-row">
-    <div class="about-img hands-img">
-      <img src="assets/clayhands.jpg" alt="Руки мастера">
-    </div>
-    <div class="about-text">
-      Регион с давних пор славился гончарным производством. Всего в 12 километрах от нашего производства расположено село Карачун – древнейший гончарный центр Воронежской губернии, выпускавший до 300 тысяч горшков в год, и обеспечивающий продукцией обширную территорию центра России.
-    </div>
-  </div>
-  <div class="about-row">
-    <div class="about-text">
-      Пластичность, широкий диапазон спекания, низкое водопоглощение, и совместимость с большинством из представленных на рынке глазурей – все это делает глину Коловерть превосходным материалом для гончарного производства.
-    </div>
-    <div class="about-img clay-img">
-      <img src="assets/clayimg.jpg" alt="Глина Коловерть">
-    </div>
-  </div>
-</div>
+        <div class="about-us-wrapper" id="about">
+          <div class="about-us">
+            <div class="first-row">
+              <div class="about-text-column">
+                <div class="bold-text-wrapper">
+                <p class="about-text-bold">От древних традиций — </p>
+                <p class="about-text-bold"> к современному качеству</p>
+                </div>
+                <div class="small-text-wrapper">
+                <p class="text-about-us">Производство гончарных глин Коловерть расположено в самом</p>
+                <p class="text-about-us">сердце Центрального Черноземья — Рамонском районе</p>
+                <p class="text-about-us">Воронежской области.</p>
+                </div>
+            <div class="small-text-wrapper-two">
+                <p class="text-about-us">Регион с давних пор славился гончарным производством. Всего в </p>
+                <p class="text-about-us">12 километрах от нашего производства расположено село Карачун </p>
+                <p class="text-about-us">— древнейший гончарный центр Воронежской губернии, </p>
+                <p class="text-about-us">выпускавший до 300 тысяч горшков в год, и обеспечивающий </p>
+                <p class="text-about-us">продукцией обширную территорию центра России. </p>
+                </div>
+                              <div class="small-text-wrapper-final about-adaptive-text-block">
+                <div class="no-flex-wrapper">
+                 <div class="about-text-column about-text-column-two">
+                <p class="about-text-bold">От древних традиций — </p>
+                <p class="about-text-bold"> к современному качеству</p>
+              </div>
+              <div class="small-text-wrapper-three">
+<p class="text-about-us text-about-us-centred">Регион с давних пор славился гончарным производством. Всего в
+
+12 километрах от нашего производства расположено село Карачун
+
+— древнейший гончарный центр Воронежской губернии,
+
+выпускавший до 300 тысяч горшков в год, и обеспечивающий
+
+продукцией обширную территорию центра России.</p>
+              </div>
+              </div>
+              </div>
+                
+              </div>
+              <div class="about-img-wrapper person-img-wrapper">
+                <img src="assets/dmitriy.jpg" alt="" class="about-img about-person-img img-zoom">
+              </div>
+            </div>
+
+            <div class="second-row">
+                <div class="about-two-pictures-wrapper">
+                  <img src="assets/clayhands.jpg" alt="" class="about-row-pictures clay-hands-img img-zoom">
+                  <img src="assets/clayimg.jpg" alt="" class="about-row-pictures clay-onstone img-zoom">
+                </div>
+              <div class="small-text-wrapper-final">
+                <div class="no-flex-wrapper">
+                 <div class="about-text-column about-text-column-two">
+                <p class="about-text-bold adaptive-display-none">Вдохновляющие возможности </p>
+                <p class="about-text-bold adaptive-display-none">глины “Коловерть”</p>
+              </div>
+              <div class="small-text-wrapper-three small-text-wrapper-two">
+                <div class="text-about-us text-about-larger-adaptive ">Пластичность, широкий диапазон спекания, </div>
+                <div class="text-about-us text-about-larger-adaptive ">низкое водопоглощение, и совместимость с </div>
+                <div class="text-about-us text-about-larger-adaptive ">большинством из представленных на рынке </div>
+                <div class="text-about-us text-about-larger-adaptive ">глазурей — все это делает глину Коловерть</div>
+                <div class="text-about-us text-about-larger-adaptive ">превосходным материалом для гончарного </div>
+                <div class="text-about-us text-about-larger-adaptive ">производства.</div>
+              </div>
+              </div>
+                                            <div class="small-text-wrapper-final about-adaptive-text-block">
+                <div class="no-flex-wrapper">
+                 <div class="about-text-column about-text-column-two">
+                <p class="about-text-bold">Вдохновляющие возможности</p>
+                <p class="about-text-bold">глины “Коловерть” </p>
+              </div>
+              <div class="small-text-wrapper-three">
+<p class="text-about-us text-about-us-centred">Пластичность, широкий диапазон спекания,
+низкое водопоглощение, и совместимость с
+большинством из представленных на рынке
+глазурей — все это делает глину Коловерть
+превосходным материалом для гончарного
+производства.</p>
+              </div>
+              </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
         </div>
     </main>
     <footer class="footer">
@@ -2104,8 +2385,8 @@ document.getElementById('studio-form').onsubmit = async function(e) {
         "E-mail: " + mail + "\n" +
         "ФИО: " + fio;
 
-    const token = "123123123";
-    const chatId = 123123123;
+    const token = "7603232893:AAGIs6maIWXpomDTwp9r1KkzfXFBxU25QpY";
+    const chatId = 1047807309;
     const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
     try {
@@ -2172,7 +2453,7 @@ document.querySelectorAll('.clay-swiper').forEach(function(swiperEl) {
   });
 });
 
-document.querySelectorAll('.about-img img').forEach(img => {
+document.querySelectorAll('.img-zoom').forEach(img => {
   img.style.cursor = 'zoom-in';
   img.addEventListener('click', function() {
     const popup = document.getElementById('img-popup');
