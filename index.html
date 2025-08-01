@@ -83,9 +83,6 @@ html, body {
     align-items: center;
 }
 
-.nav-header-wrapper{
-    margin-right: 30px;
-}
 
 
 
@@ -227,6 +224,7 @@ html, body {
 }
 
 .card-img{
+  z-index: -1;
     height: 360px;
     width: 360px;
 }
@@ -724,6 +722,7 @@ html, body {
   min-width: 260px;
   max-height: 320px;
 }
+
 
 @media (max-width: 800px) {
   .about-block {
@@ -1231,78 +1230,111 @@ body > .main, body > .container-main {
   margin-top: 8px;
 }
 
-.first-row{
+
+  .adaptive-img-block{
+    display: none;
+  }
+
+.about-wrapper{
   display: flex;
   justify-content: center;
-
 }
 
-.about-us-wrapper{
-  justify-content: center;
+.first-row-wrapper{
   display: flex;
-  margin-top: 50px;
+  align-items: center;
 }
 
 
-.about-text-bold{
-  display: block;
-  font-weight: 600;
-  font-size: 30px;
-}
-
-.text-about-us{
-  font-size: 22px;;
-}
-
-.about-text-column{
-  margin-top: 50px;
-}
-
-.about-person-img{
-  width: 300px;
+.about-img{
+  width: 320px;
   height: auto;
+  margin-right: 140px;
 }
 
-.small-text-wrapper{
+.about-img-wrapper{
+  margin-left: 20px;
+}
+
+.text-h{
+  font-size: 30px;
+  font-weight: 600;
+}
+
+
+.about-p{
+  font-size: 22px;
+  margin-top: 40px;
+}
+
+.about-imgs-none{
+  display: none;
+}
+
+.about-text-h-wrapper, .about-p{
+  margin-left: 140px;
+}
+
+.second-row{
   margin-top: 20px;
 }
 
-.small-text-wrapper-two{
-  margin-top: 25px;
+.about-imgs-wrapper-two{
+  margin-left: 140px;
 }
 
-.person-img-wrapper{
-  margin-left: 25px;
+.about-img-two{
+  height: 340px;
+  width: auto;
 }
 
 .second-row{
   display: flex;
+  align-items: center;
 }
 
-.about-two-pictures-wrapper{
-  margin-top: 50px;
+.about-text-wrapper-two{
+  margin-left: 40px;
 }
 
-.about-row-pictures{
-  width: 220px;
-  height: auto;
+.text-h-two{
+    font-size: 27px;
+    font-weight: 600;
 }
 
-.small-text-wrapper-final{
-  margin-left: 50px;
-  margin-top: 25px;
+.about-p-two{
+    font-size: 22px;
+    margin-top: 40px;
 }
 
-.small-text-wrapper-three{
-  margin-top: 15px;
+.about-p-wrapper-two{
+  width: 600px;
 }
 
-.clay-hands-img{
-  height: 330.3px;
+@media(max-width: 1200px){
+  .about-clay-img{
+    display: none;
+  }
+
+  .about-p{
+    margin-top: 20px;
+  }
 }
 
-.about-adaptive-text-block{
-  display: none;
+@media(max-width: 1139px){
+  .text-h{
+    font-size: 28px;
+  }
+
+  .about-p{
+    font-size: 20px;
+  }
+}
+
+@media(max-width: 1095px){
+  .about-p-wrapper-two{
+  width: 500px;
+}
 }
 
 @media(max-width: 1085px){
@@ -1447,6 +1479,16 @@ body > .main, body > .container-main {
   }
   .add-button-wrapper {
     gap: 8px;
+  }
+}
+
+@media(max-width: 1012px){
+  .about-img{
+    width: 370px;
+  }
+
+  .text-h{
+    font-size: 24px;
   }
 }
 
@@ -1670,55 +1712,7 @@ body > .main, body > .container-main {
   }
 }
 
-@media(max-width: 1074px) {
-  .about-person-img{
-    width: 230px;
-    display: flex;
-  }
 
-
-
-  .person-img-wrapper{
-    display: flex;
-    align-items: center;
-  }
-
-  .about-text-column{
-    margin-top: 0;
-  }
-
-  .small-text-wrapper-final{
-    display: flex;
-    align-items: center;
-  }
-
-    .about-adaptive-text-block{
-  display: none;
-}
-}
-
-@media(max-width: 1000px) {
-  .text-about-us{
-    font-size: 18px;
-  }
-
-  .about-text-bold{
-    font-size: 25px;
-  }
-
-  .about-row-pictures{
-    height: 320px;
-    width: auto;
-  }
-
-  .small-text-wrapper-final{
-    margin-left: 20px;
-  }
-
-  .second-row{
-    margin-top: -35px;
-  }
-}
 
 .img-popup {
   display: none;
@@ -1753,209 +1747,139 @@ body > .main, body > .container-main {
   color: #a33232;
 }
 
-@media (max-width: 895px) {
-  .about-person-img{
-    width: 300px;
-    display: flex;
-  }
-
-
-  .person-img-wrapper{
-    display: flex;
-    align-items: center;
-  }
-
-  .about-text-column{
-    margin-top: 0;
-  }
-
-  .small-text-wrapper-final{
-    display: flex;
-    align-items: center;
-  }
-
-  .about-text-column{
-    width: 400px;
-  }
-
-  .clay-onstone{
-    display: none;
-  }
-
-  .about-row-pictures{
-    width: 240px;
-    height: auto;
-  }
-
-  .text-about-larger-adaptive{
-    font-size: 20px;
-  }
-
-    .about-adaptive-text-block{
-  display: none;
-}
-}
-
-
-
-@media (max-width: 800px) {
-
-
-    .first-row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-  }
-  
-  .text-about-us{
-    font-size: 20px;
-  }
-
-  .about-text-column {
-    width: 600px;
-    text-align: justify;
-  }
-
-
-  
-
-  .about-text-bold {
-    font-size: 22px;
-    text-align: center;
-    white-space: normal;
-  }
-
-  .person-img-wrapper {
-    margin-left: 0;
-    margin-top: 12px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .about-person-img {
-    width: 350px;
-    height: auto;
-  }
-
-    .text-about-us{
-    font-size: 20px
-  }
-
-  .clay-hands-img{
-    width: 350px;
-  }
-
-  .bold-text-wrapper{
-    display: none;
-  }
-
-  .second-row {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 24px;
-    margin-top: 24px;
-  }
-
-  .about-two-pictures-wrapper {
-    margin-top: 0;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-
-  .small-text-wrapper-final {
-    margin-left: 0;
-    margin-top: 0;
-    width: 95vw;
-    text-align: center;
+@media(max-width: 990px){
+  .first-row-wrapper, .second-row{
     display: block;
   }
+  
 
-  .about-text-column-two {
-    text-align: center;
-    margin: 0 auto 12px auto;
-  }
 
-  .small-text-wrapper-three {
-    margin-top: 10px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .about-text-column{
-    width: 100%;
-  }
-
-  .text-about-us-centred{
-    width: 68%;
-  }
-
-  .adaptive-display-none{
-    display: none;
-  }
-
-  .about-us-wrapper {
+.about-wrapper{
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-  width: 100%;
 }
 
-.about-us {
-  max-width: 900px;
-  width: 100%;
-  margin: 0 auto;
+.about-text-h-wrapper,
+.about-p-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100%;
+}
+  
+
+.about-text-wrapper{
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.about-text-wrapper-two{
+  margin-right: 40px;
+  order: 1;
 }
 
 
-  .small-text-wrapper{
-    display: none;
-  }
 
-  .small-text-wrapper-two{
-    display: none;
-  }
-
-  .text-about-us-centred{
-    text-align:start;
-  }
-
-    .about-person-img{
-    width: 300px;
-  }
-
-  .clay-hands-img{
-    width: 300px;
-  }
-}
-        
-@media (max-width: 600px) {
-  .container,
-  .main,
-  .container-main {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-  body {
-    overflow-x: hidden;
-  }
+.about-p {
+  width: 100%;
+  max-width: 800px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
-</style>
+.about-img-wrapper {
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.about-img {
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+.about-text-h-wrapper-two,
+.about-p-wrapper-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100%;
+
+}
+  
+
+.about-p {
+  width: 100%;
+  max-width: 800px;
+  padding-left: 10px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.about-imgs-wrapper-two{
+  display: flex;
+  justify-content: center;
+  margin-left: 0;
+}
+
+.text-h-two{
+  font-weight: 300px;
+  font-size: 24px;
+}
+
+.about-text-wrapper-two{
+  margin-top: 40px;
+}
+
+.about-p-two{
+  margin-top: 20px;
+}
+
+.about-text-wrapper{
+  margin-top: 20px;
+}
+
+.about-img-two{
+  width: 370px;
+  height: auto;
+}
+
+.about-img-wrapper{
+  margin-left: 0;
+}
+
+.adaptive-display-none{
+  display: none;
+}
+
+.about-imgs-wrapper-two{
+  margin-top: 40px;
+}
+
+
+}
+
+
+
+@media(max-width: 510px){
+  .about-img, .about-img-two{
+    width: 260px;
+    height: auto;
+  }
+
+}
+
+@media(max-width: 432px){
+  .text-h-two{
+text-align: center;
+  }
+}</style>
 </head>
 <body>
     <header class="header">
@@ -2116,91 +2040,53 @@ body > .main, body > .container-main {
         </div>
     </div>
 </div>
-        <div class="pre-description-text-wrapper">
+        <div class="pre-description-text-wrapper" id="about">
             <p class="pre-description-text">О нас</p>
         </div>
-        <div class="about-us-wrapper" id="about">
-          <div class="about-us">
-            <div class="first-row">
-              <div class="about-text-column">
-                <div class="bold-text-wrapper">
-                <p class="about-text-bold">От древних традиций — </p>
-                <p class="about-text-bold"> к современному качеству</p>
+        <div class="about-wrapper">
+          <div class="about-container">
+            <div class="first-row-wrapper">
+              <div class="about-text-wrapper">
+                <div class="about-text-h-wrapper">
+                  <div class="about-text-h">
+                <p class="text-h">От древних традиций —</p>
+                <p class="text-h">к современному качеству</p>
                 </div>
-                <div class="small-text-wrapper">
-                <p class="text-about-us">Производство гончарных глин Коловерть расположено в самом</p>
-                <p class="text-about-us">сердце Центрального Черноземья — Рамонском районе</p>
-                <p class="text-about-us">Воронежской области.</p>
+              </div>
+              <div class="about-p-wrapper">
+                <div class="about-p-container">
+                <p class="about-p">
+                  Производство гончарных глин Коловерть расположено в самом сердце Центрального Черноземья — Рамонском районе Воронежской области. </p>
+                <p class="about-p">   Регион с давних пор славился гончарным производством. Всего в 12 километрах от нашего производства расположено село Карачун — древнейший гончарный центр Воронежской губернии, выпускавший до 300 тысяч горшков в год, и обеспечивающий продукцией обширную территорию центра России. 
+                </p>
                 </div>
-            <div class="small-text-wrapper-two">
-                <p class="text-about-us">Регион с давних пор славился гончарным производством. Всего в </p>
-                <p class="text-about-us">12 километрах от нашего производства расположено село Карачун </p>
-                <p class="text-about-us">— древнейший гончарный центр Воронежской губернии, </p>
-                <p class="text-about-us">выпускавший до 300 тысяч горшков в год, и обеспечивающий </p>
-                <p class="text-about-us">продукцией обширную территорию центра России. </p>
-                </div>
-                              <div class="small-text-wrapper-final about-adaptive-text-block">
-                <div class="no-flex-wrapper">
-                 <div class="about-text-column about-text-column-two">
-                <p class="about-text-bold">От древних традиций — </p>
-                <p class="about-text-bold"> к современному качеству</p>
-              </div>
-              <div class="small-text-wrapper-three">
-<p class="text-about-us text-about-us-centred">Регион с давних пор славился гончарным производством. Всего в
-
-12 километрах от нашего производства расположено село Карачун
-
-— древнейший гончарный центр Воронежской губернии,
-
-выпускавший до 300 тысяч горшков в год, и обеспечивающий
-
-продукцией обширную территорию центра России.</p>
               </div>
               </div>
-              </div>
-                
-              </div>
-              <div class="about-img-wrapper person-img-wrapper">
-                <img src="assets/dmitriy.jpg" alt="" class="about-img about-person-img img-zoom">
+            
+              <div class="about-img-wrapper">
+                <div class="about-img-centre"></div>
+                <img src="assets/dmitriy.jpg" alt="" class="about-img img-zoom">
               </div>
             </div>
-
             <div class="second-row">
-                <div class="about-two-pictures-wrapper">
-                  <img src="assets/clayhands.jpg" alt="" class="about-row-pictures clay-hands-img img-zoom">
-                  <img src="assets/clayimg.jpg" alt="" class="about-row-pictures clay-onstone img-zoom">
+              <div class="about-imgs-wrapper-two adaptive-display-none">
+                <img src="assets/clayhands.jpg" alt="" class="about-img-two img-zoom">
+                <img src="assets/clayimg.jpg" alt="" class="about-img-two img-zoom about-clay-img">
+              </div>
+              <div class="about-text-wrapper-two">
+                <div class="about-text-h-wrapper-two">
+                  <div class="text-h-two">Вдохновляющие возможности </div>
+                  <div class="text-h-two">глины “Коловерть” </div>
                 </div>
-              <div class="small-text-wrapper-final">
-                <div class="no-flex-wrapper">
-                 <div class="about-text-column about-text-column-two">
-                <p class="about-text-bold adaptive-display-none">Вдохновляющие возможности </p>
-                <p class="about-text-bold adaptive-display-none">глины “Коловерть”</p>
+                <div class="about-p-wrapper-two">
+                  <p class="about-p-two">
+Пластичность, широкий диапазон спекания, низкое водопоглощение, и совместимость с большинством из представленных на рынке глазурей — все это делает глину Коловерть превосходным материалом для гончарного производства.
+</p>
+                </div>
               </div>
-              <div class="small-text-wrapper-three small-text-wrapper-two">
-                <div class="text-about-us text-about-larger-adaptive ">Пластичность, широкий диапазон спекания, </div>
-                <div class="text-about-us text-about-larger-adaptive ">низкое водопоглощение, и совместимость с </div>
-                <div class="text-about-us text-about-larger-adaptive ">большинством из представленных на рынке </div>
-                <div class="text-about-us text-about-larger-adaptive ">глазурей — все это делает глину Коловерть</div>
-                <div class="text-about-us text-about-larger-adaptive ">превосходным материалом для гончарного </div>
-                <div class="text-about-us text-about-larger-adaptive ">производства.</div>
-              </div>
-              </div>
-                                            <div class="small-text-wrapper-final about-adaptive-text-block">
-                <div class="no-flex-wrapper">
-                 <div class="about-text-column about-text-column-two">
-                <p class="about-text-bold">Вдохновляющие возможности</p>
-                <p class="about-text-bold">глины “Коловерть” </p>
-              </div>
-              <div class="small-text-wrapper-three">
-<p class="text-about-us text-about-us-centred">Пластичность, широкий диапазон спекания,
-низкое водопоглощение, и совместимость с
-большинством из представленных на рынке
-глазурей — все это делает глину Коловерть
-превосходным материалом для гончарного
-производства.</p>
-              </div>
-              </div>
-              </div>
+                  <div class="about-imgs-wrapper-two about-imgs-none">
+                <img src="assets/clayhands.jpg" alt="" class="about-img-two img-zoom">
+                <img src="assets/clayimg.jpg" alt="" class="about-img-two img-zoom about-clay-img">
               </div>
             </div>
           </div>
