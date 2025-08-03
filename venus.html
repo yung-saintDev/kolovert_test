@@ -538,7 +538,36 @@ body{
 }
 
 
+.ul-contacts{
+  list-style: none;
+}
 
+.li-contacts{
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.telegram-img{
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  margin-top: 2px;
+}
+
+.vk-img{
+  width: 45px;
+  height: 45px;
+  margin-right: 20px;
+}
+
+
+
+.footer-contact-imgs{
+  display: flex;
+}
 
 @keyframes fadeInUp {
     0% {
@@ -672,7 +701,7 @@ body{
     <header class="header">
         <div class="container">
             <div class="header-logo-wrapper">
-                <img src="assets/logo.png" alt="" class="header-logo">
+                <img src="/assets/logo.png" alt="" class="header-logo">
             </div>
             <div class="nav-header-wrapper">
                     <ul class="ul-header">
@@ -728,20 +757,22 @@ body{
     <footer class="footer">
         <div class="container-footer">
             <div class="footer-text-wrapper">
-                <!-- <p class="footer-text">© 2025 Коловерть</p>
-                <div class="contacts-text-wrapper">
-                    <p class="contacts-text">Контакты</p>
-                </div>
-                <div class="contacts-wrapper">
+                <div class="ul-contacts-wrapper">
                     <ul class="ul-contacts">
-                        <li class="li-contacts">+7 920 449 69 19</li>
-                        <li class="li-contacts">mail@mail.ru</li>
-                        <li class="li-contacts">Телеграм</li>
-                        <li class="li-contacts">Вк</li>
+                        <li class="li-contacts">+7 (950) 766-56-55</li>
+                        <li class="li-contacts">goncharnya.kolovert@gmail.com</li>
                     </ul>
-                </div> -->
+                    <div class="footer-contact-imgs">
+                    <div class="telegram-img-wrapper">
+                        <a href=" https://t.me/goncharnya_kolovert"><img src="/assets/telegram.svg" alt="" class="telegram-img"></a>
+                    </div>
+                     <div class="vk-img-wrapper">
+                       <a href="https://vk.com/goncharnya_kolovert"><img src="/assets/vk.svg" alt="" class="vk-img"></a> 
+                    </div>
+                </div>
+                </div>
+                </div>
             </div>
-        </div>
     </footer>
 
     <!-- Popup window -->
