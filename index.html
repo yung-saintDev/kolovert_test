@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
-    <style>*{
+    <style>
+      *{
     margin: 0;
     padding: 0;
 }
@@ -603,9 +604,6 @@ html, body {
   box-sizing: border-box;
 }
 
-.promo-main-wrapper, .special-for-studios-wrapper, .get-conditions-wrapper {
-  z-index: 2;
-}
 
 .promo-swiper .swiper-slide::before {
   content: "";
@@ -722,6 +720,8 @@ html, body {
   min-width: 260px;
   max-height: 320px;
 }
+
+
 
 
 @media (max-width: 800px) {
@@ -1202,8 +1202,7 @@ body > .main, body > .container-main {
 }
 
  .conditions-button {
-  margin-top: 100px;
-  margin-bottom: 150px;
+  margin-top: 110px;
 
 }
 
@@ -1626,13 +1625,7 @@ body > .main, body > .container-main {
   }
 
 
-  .get-conditions-wrapper{
-    padding: 0;
-  }
 
-  .special-for-studios-wrapper{
-    padding: 0;
-  }
 }
 
 @media(max-width: 477px){
@@ -1787,6 +1780,11 @@ body > .main, body > .container-main {
   max-width: 800px;
   margin-left: 0 !important;
   margin-right: 0 !important;
+  text-align: justify;
+}
+
+.about-p-two{
+  text-align: justify;
 }
 
 .about-img-wrapper {
@@ -1817,7 +1815,6 @@ body > .main, body > .container-main {
 .about-p {
   width: 100%;
   max-width: 800px;
-  padding-left: 10px;
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
@@ -1877,9 +1874,30 @@ body > .main, body > .container-main {
 
 @media(max-width: 432px){
   .text-h-two{
-text-align: center;
+  text-align: center;
   }
-}</style>
+}
+
+@media(max-width: 600px){
+  .conditions-button{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .for-studios{
+    margin-top: 10px;
+    font-size: 25px;
+  }
+  .special-for-studios-wrapper{
+    margin-bottom: 100px;
+  }
+
+  .conditions-button{
+    margin-bottom: -250px;
+  }
+
+}
+    </style>
 </head>
 <body>
     <header class="header">
@@ -1924,18 +1942,18 @@ text-align: center;
         </div>
       </div>
       <div class="swiper-slide" style="background-image: url('assets/background2.jpeg');">
-        <div class="special-for-studios-wrapper">
-          <div class="special-for-studios">
-            <p class="for-studios">
-  Мастерская гончарных глин Коловерть предлагает специальные условия сотрудничества
-  для студий керамики.<br><br>
-  <small>Заполните форму и получите<br>
-  персональное предложение.</small>
-</p>
-          </div>
+        <div class="promo-main-wrapper">
+          <p class="promo-main">
+            <span class="promo-main-title">
+            </span><br><br>
+            Мастерская гончарных глин Коловерть предлагает специальные условия сотрудничества для студий керамики<br><br>
+            Заполните форму и получите предложение
+          </p>
         </div>
-        <div class="get-conditions-wrapper">
-          <p class="conditions-button">Получить предложение</p>
+        <div class="sample-order-button-wrapper get-conditions-wrapper">
+          <div class="conditions-button">
+            Получить предложение
+          </div>
         </div>
       </div>
     </div>
@@ -1973,7 +1991,7 @@ text-align: center;
                 </ul>
             </div>
             <div class="add-button-wrapper">
-                <a class="add-button product-button no-style-link" href="/website/clays/venus/venus.html">купить</a>
+                <a class="add-button product-button no-style-link" href="venus.html">купить</a>
                 <a class="about-clay-button product-button no-style-link" href="">подробнее</a>
             </div>
         </div>
@@ -2004,7 +2022,7 @@ text-align: center;
                 </ul>
             </div>
             <div class="add-button-wrapper">
-                <a class="add-button product-button no-style-link" href="/website/clays/mars/mars.html">купить</a>
+                <a class="add-button product-button no-style-link" href="mars.html">купить</a>
                 <a class="about-clay-button product-button no-style-link" href="">подробнее</a>
             </div>
         </div>
@@ -2034,7 +2052,7 @@ text-align: center;
                 </ul>
             </div>
             <div class="add-button-wrapper">
-                <a class="add-button product-button no-style-link" href="/website/clays/jupiter/jupiter.html">купить</a>
+                <a class="add-button product-button no-style-link" href="jupiter.html">купить</a>
                 <a class="about-clay-button product-button no-style-link" href="/website/aboutpage/jupiter description/jupiterdescription.html">подробнее</a>
             </div>
         </div>
